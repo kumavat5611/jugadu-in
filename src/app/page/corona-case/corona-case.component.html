@@ -1,0 +1,175 @@
+<!--Main container start -->
+  <main class="main-container">
+
+  <!-- Detail extra post start -->
+  <div class="extra-posts">
+    <div class="extra-post-wrapper">
+      <div class="columns column-2">
+        <article class="extra-post-box">
+          <a href="#" class="extra-post-link">
+            <div class="post-image">
+              <span><img src="assets/images/popular/corona4.png" width="80" height="80"></span>
+            </div>
+            <div class="post-title">
+              Use a tissue fo coughs
+              <span class="post-date">#Coronavirus</span>
+            </div>
+          </a>
+        </article>
+      </div>
+      <div class="columns column-2">
+        <article class="extra-post-box">
+          <a href="#" class="extra-post-link">
+            <div class="post-image">
+              <span><img src="assets/images/popular/hand.png" width="80" height="80"></span>
+            </div>
+            <div class="post-title">
+              Avoid hand touching your face, eyes and nose
+              <span class="post-date">#Coronavirus</span>
+            </div>
+          </a>
+        </article>
+      </div>
+      <div class="columns column-2">
+        <article class="extra-post-box">
+          <a href="#" class="extra-post-link">
+            <div class="post-image">
+              <span><img src="assets/images/popular/wash.png" width="80" height="80"></span>
+            </div>
+            <div class="post-title">
+              Wash your hands at least 20 seconds
+              <span class="post-date">#Coronavirus</span>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </div>
+  <!-- Detail extra post start -->
+
+  <section class="main-content">
+    <div class="main-content-wrapper">
+      <div class="content-body">
+
+        <!-- article body start -->
+        <article class="article-wrapper">
+          <div class="article-header">
+            <div class="breadcrumb">
+              <ul>
+                <li><a href="#"><span routerLinkActive="active" routerLink="home">Home</span></a> <i
+                  class="material-icons">&#xE315;</i></li>
+                <li><a href="#"><span routerLinkActive="active" routerLink="/corona">Coronavirus-Case</span></a></li>
+                <li><span></span></li>
+              </ul>
+            </div>
+
+            <div class="article-header-title">
+              <h1 class="article-title" style="font-weight: 700">Coronavirus Live Case Update (COVID-19): </h1>
+            </div>
+            <div class="article-meta-info">
+              <span class="article-reading-time">Last updated 5 minutes ago</span>
+            </div>
+
+          </div>
+          <div class="article-content">
+            <div class="article-inner">
+              <div class="maincounter-wrap">
+                <h1 class="maincounter-wrap-h1">Coronavirus Cases:</h1>
+                <div class="maincounter-number">
+                  <span style="color:#aa; padding-top: 5px;">{{totalCase}} </span>
+                </div>
+              </div>
+              <div class="maincounter-wrap">
+                <h1 class="maincounter-wrap-h1">Deaths:</h1>
+                <div class="maincounter-number">
+                  <span style="color:#DC4E41; padding-top: 5px;">{{totalDeath}} </span>
+                </div>
+              </div>
+              <div class="maincounter-wrap">
+                <h1 class="maincounter-wrap-h1">Recovered:</h1>
+                <div class="maincounter-number">
+                  <span style="color:#70ca3f; padding-top: 5px;">{{totalRecovered}} </span>
+                </div>
+              </div>
+              <figure>
+                <img src="">
+                <figcaption>
+                  #Coronavirus &nbsp;&nbsp; #COVID19
+                </figcaption>
+              </figure>
+            </div>
+            <div id="endOfTheArticle"></div>
+            <div class="article-header-title">
+              <h5 style="font-weight: 600; color: #721c24">COVID-19 View By Country: </h5>
+            </div>
+
+            <table id="" class="table table-striped table-bordered" style="width:100%">
+              <thead>
+              <tr>
+                <th>Country</th>
+                <th>Total Cases</th>
+                <th>Deaths</th>
+                <th>Recovered</th>
+                <th>Active Case</th>
+                <th>Total Tests</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr *ngFor="let case of caseByCountry">
+                <td>{{case.Country}}</td>
+                <td>{{case.TotalCases}}</td>
+                <td>{{case.TotalDeaths}}</td>
+                <td>{{case.TotalRecovered}}</td>
+                <td>{{case.ActiveCases}}</td>
+                <td>{{case.TotalTests}}</td>
+              </tr>
+              </tbody>
+              <tfoot>
+              </tfoot>
+            </table>
+          </div>
+        </article>
+        <!-- article body end -->
+
+      </div>
+      <div class="content-sidebar">
+        <div class="sidebar_inner">
+
+          <div class="widget-item">
+            <div class="w-header">
+              <div class="w-title">Must Know Facts</div>
+              <div class="w-seperator"></div>
+            </div>
+            <div class="w-boxed-post">
+              <ul>
+                <li class="active" *ngFor="let popular of PopularPosts;">
+                  <a href="#" [ngStyle]="{'background-image':'url(' + popular.image + ')'}">
+                    <div class="box-wrapper">
+                      <div class="box-left">
+                        <span>{{popular.count}}</span>
+                      </div>
+                      <div class="box-right">
+                        <h3 class="p-title">{{popular.heading}}</h3>
+                        <div class="p-icons">
+                          #Coronavirus &nbsp; #COVID-19
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<script language="JavaScript">
+    $(document).ready(function() {
+        $('#example').DataTable();
+    } );
+</script>
+<!--Main container end -->

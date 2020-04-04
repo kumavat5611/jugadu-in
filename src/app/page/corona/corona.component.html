@@ -1,0 +1,234 @@
+
+<!--Main container start -->
+<main class="main-container">
+
+  <!-- Detail extra post start -->
+  <div class="extra-posts">
+    <div class="extra-post-wrapper">
+      <div class="columns column-2">
+        <article class="extra-post-box">
+          <a href="#" class="extra-post-link">
+            <div class="post-image">
+              <span><img src="assets/images/popular/corona4.png" width="80" height="80"></span>
+            </div>
+            <div class="post-title">
+              Use a tissue fo coughs
+              <span class="post-date">#Coronavirus</span>
+            </div>
+          </a>
+        </article>
+      </div>
+      <div class="columns column-2">
+        <article class="extra-post-box">
+          <a href="#" class="extra-post-link">
+            <div class="post-image">
+              <span><img src="assets/images/popular/hand.png" width="80" height="80"></span>
+            </div>
+            <div class="post-title">
+              Avoid hand touching your face, eyes and nose
+              <span class="post-date">#Coronavirus</span>
+            </div>
+          </a>
+        </article>
+      </div>
+      <div class="columns column-2">
+        <article class="extra-post-box">
+          <a href="#" class="extra-post-link">
+            <div class="post-image">
+              <span><img src="assets/images/popular/wash.png" width="80" height="80"></span>
+            </div>
+            <div class="post-title">
+              Wash your hands at least 20 seconds
+              <span class="post-date">#Coronavirus</span>
+            </div>
+          </a>
+        </article>
+      </div>
+    </div>
+  </div>
+  <!-- Detail extra post start -->
+
+  <section class="main-content">
+    <div class="main-content-wrapper">
+      <div class="content-body">
+
+        <!-- article body start -->
+        <article class="article-wrapper">
+          <div class="article-header">
+            <div class="breadcrumb">
+              <ul>
+                <li><a href="#"><span routerLinkActive="active" routerLink="home">Home</span></a> <i class="material-icons">&#xE315;</i></li>
+                <li><a href="#"><span routerLinkActive="active" routerLink="corona">Coronavirus</span></a></li>
+                <li><span></span></li>
+              </ul>
+            </div>
+
+            <div class="article-header-title">
+              <h1 class="article-title">Coronavirus disease (COVID-19) advice for the public</h1>
+            </div>
+
+            <div class="article-meta-info">
+              <a href="#" class="author-name">WHO</a> —
+              <span class="article-reading-time">reading time 3 minute</span>
+              <h4 class="article-reading-time"><a href="#" class="nav-link" routerLinkActive="active" routerLink="/corona-case">Coronavirus Live Update</a></h4>
+            </div>
+
+          </div>
+          <div class="article-content"> <!-- adbox120 or adbox160 -->
+            <div class="article-inner" *ngFor="let covid of covidAdvice;">
+              <div class="article-description">
+                {{covid.heading}}
+              </div>
+              <p>{{covid.detail}}</p>
+              <figure>
+                <img src="{{covid.image}}">
+                <figcaption>
+                  #Coronavirus &nbsp;&nbsp; #COVID19
+                </figcaption>
+              </figure>
+
+              <!-- article sources area start -->
+             <!-- <div class="article-source-box">
+                <div class="source-item">
+                  <span class="source-subtitle">Source : </span>
+                  <span class="source-url">https://www.who.int/emergencies/diseases/novel-coronavirus-2019/advice-for-public/myth-busters</span>
+                </div>
+              </div>
+-->
+             </div>
+
+
+
+
+            <!--this is important for the left ad box or share box fixer -->
+            <div id="endOfTheArticle"></div>
+
+            <!-- More article unit start -->
+<!--
+            <div class="more-article">
+              <div class="w-header">
+                <div class="w-title">Continue Reading</div>
+                <div class="w-seperator"></div>
+              </div>
+              <div class="more-posts">
+                <div class="columns column-2">
+
+                  <article class="post-box" style="background-image: url(/assets/images/news-test-images/news-img5.jpg);">
+                    <div class="post-overlay">
+                      <a href="#" class="post-category" title="Title of blog post" rel="tag">Technology</a>
+                      <h3 class="post-title">Slipknot’s Concert in Phoenix Showed Why Mayhem Fest Died</h3>
+                      <div class="post-meta">
+                        <div class="post-meta-author-avatar">
+                          <img alt="avatar" src="../../../www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50.png" class="avatar" height="24" width="24">
+                        </div>
+                        <div class="post-meta-author-info">
+								    					<span class="post-meta-author-name">
+								    						<a href="#" title="Posts by John Doe" rel="author">John Doe</a>
+								    					</span>
+                          <span class="middot">·</span>
+                          <span class="post-meta-date">
+								    						<abbr class="published updated" title="December 4, 2017">12 November 2018</abbr>
+								    					</span>
+                        </div>
+                      </div>
+                    </div>
+                    <a href="#" class="post-overlayLink"></a>
+                  </article>
+
+                </div>
+                <div class="columns column-2">
+
+                  <article class="post-box" style="background-image: url(/assets/images/news-test-images/news-img1.jpg);">
+                    <div class="post-overlay">
+                      <a href="#" class="post-category" title="Title of blog post" rel="tag">Technology</a>
+                      <h3 class="post-title">Slipknot’s Concert in Phoenix Showed Why Mayhem Fest Died</h3>
+                      <div class="post-meta">
+                        <div class="post-meta-author-avatar">
+                          <img alt="avatar" src="../../../www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50.png" class="avatar" height="24" width="24">
+                        </div>
+                        <div class="post-meta-author-info">
+								    					<span class="post-meta-author-name">
+								    						<a href="#" title="Posts by John Doe" rel="author">John Doe</a>
+								    					</span>
+                          <span class="middot">·</span>
+                          <span class="post-meta-date">
+								    						<abbr class="published updated" title="December 4, 2017">12 November 2018</abbr>
+								    					</span>
+                        </div>
+                      </div>
+                    </div>
+                    <a href="#" class="post-overlayLink"></a>
+                  </article>
+
+                </div>
+                <div class="columns column-2">
+
+                  <article class="post-box" style="background-image: url(/assets/images/news-test-images/news-img6.jpg);">
+                    <div class="post-overlay">
+                      <a href="#" class="post-category" title="Title of blog post" rel="tag">Technology</a>
+                      <h3 class="post-title">Slipknot’s Concert in Phoenix Showed Why Mayhem Fest Died</h3>
+                      <div class="post-meta">
+                        <div class="post-meta-author-avatar">
+                          <img alt="avatar" src="../../../www.gravatar.com/avatar/205e460b479e2e5b48aec07710c08d50.png" class="avatar" height="24" width="24">
+                        </div>
+                        <div class="post-meta-author-info">
+								    					<span class="post-meta-author-name">
+								    						<a href="#" title="Posts by John Doe" rel="author">John Doe</a>
+								    					</span>
+                          <span class="middot">·</span>
+                          <span class="post-meta-date">
+								    						<abbr class="published updated" title="December 4, 2017">12 November 2018</abbr>
+								    					</span>
+                        </div>
+                      </div>
+                    </div>
+                    <a href="#" class="post-overlayLink"></a>
+                  </article>
+
+                </div>
+
+
+              </div>
+            </div>
+-->
+          </div>
+        </article>
+        <!-- article body end -->
+
+      </div>
+      <div class="content-sidebar">
+        <div class="sidebar_inner">
+
+          <div class="widget-item">
+            <div class="w-header">
+              <div class="w-title">Must Know Facts</div>
+              <div class="w-seperator"></div>
+            </div>
+            <div class="w-boxed-post">
+              <ul>
+                <li class="active" *ngFor="let popular of PopularPosts;">
+                  <a href="#" [ngStyle]="{'background-image':'url(' + popular.image + ')'}">
+                    <div class="box-wrapper">
+                      <div class="box-left">
+                        <span>{{popular.count}}</span>
+                      </div>
+                      <div class="box-right">
+                        <h3 class="p-title">{{popular.heading}}</h3>
+                        <div class="p-icons">
+                          #Coronavirus &nbsp; #COVID-19
+                        </div>
+                      </div>
+                    </div>
+                  </a>
+                </li>
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</main>
+<!--Main container end -->
