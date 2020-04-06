@@ -1,9 +1,6 @@
 {
   "name": "jugadu-in",
   "version": "0.0.0",
-  "engines": {
-    "node": "12.11.1"
-  },
   "scripts": {
     "ng": "ng",
     "start": "node index.js",
@@ -45,6 +42,10 @@
     "protractor": "~5.4.0",
     "ts-node": "~7.0.0",
     "tslint": "~5.15.0",
-    "typescript": "~3.5.3"
+    "typescript": "<3.6.0"
+  },
+  "engines": {
+    "node": "12.9.0",
+    "npm": "3.10.10"
   }
 }
