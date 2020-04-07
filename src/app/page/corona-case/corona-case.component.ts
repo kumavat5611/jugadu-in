@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import {DataService} from '../../data.service';
+import { NgxUiLoaderService } from 'ngx-ui-loader';
 
 @Component({
   selector: 'app-corona-case',
@@ -43,10 +44,17 @@ export class CoronaCaseComponent implements OnInit {
     }
   ];
 
-  constructor(private data: DataService) { }
+  constructor(private data: DataService,
+              private ngxService: NgxUiLoaderService) { }
 
   ngOnInit() {
+    this.ngxService.start();
+    setTimeout(() => {
+      this.ngxService.stop();
+    }, 5000);
+
     this.data.GetAllReports().then((response) => {
+      this.ngxService.start();
       response.json().then((data) => {
         const reports = data.reports[0];
         this.totalCase = this.numberWithCommas(reports.cases)
@@ -54,6 +62,7 @@ export class CoronaCaseComponent implements OnInit {
         this.totalRecovered = this.numberWithCommas(reports.recovered);
         this.caseByCountry = data.reports[0].table[0];
         this.totalWorldAllCase = data.reports[0].table[0][0];
+        this.ngxService.stop();
       });
     }).catch();
   }
